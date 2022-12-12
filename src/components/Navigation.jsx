@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
+import { PokemonContext } from "../context/PokemonContext";
 
 export const Navigation = () => {
+  const { number } = useContext(PokemonContext);
+
   return (
     <>
       <header className="container">
@@ -22,6 +25,8 @@ export const Navigation = () => {
               placeholder="Search for a pokemon"
             />
           </div>
+
+          <button className="btn-search">Search</button>
         </form>
       </header>
     </>
