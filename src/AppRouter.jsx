@@ -1,10 +1,18 @@
 import React from "react";
-import { Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
+import Navigation from "./components/Navigation";
+import { HomePage, PokemonPage, SearchPage } from "./pages";
 
-const AppRouter = () => {
+export const AppRouter = () => {
   return (
     <Routes>
-      <Route path="/"></Route>
+      <Route path="/" element={<Navigation />}>
+        <Route index element={<HomePage />} />
+        <Route path="pokemon/:id" element={<PokemonPage />} />
+        <Route path="search" element={<SearchPage />} />
+      </Route>
+
+      <Route path="*" element={<Navigate to="/" />} />
     </Routes>
   );
 };
