@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { PokemonContext } from "../context/PokemonContext";
 
@@ -29,6 +29,8 @@ export const Navigation = () => {
           <button className="btn-search">Search</button>
         </form>
       </header>
+
+      <Outlet />
     </>
   );
 };
