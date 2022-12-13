@@ -332,13 +332,14 @@ Styles of Pokemon Single Page
 .container-img-pokemon {
   order: 2;
   flex: 1;
+  /* display: flex; */
   padding: 25px 25px 25px 0;
   height: 400px;
 }
 
 .container-img-pokemon img {
   height: 100%;
-  width: 100%;
+  width: 60%;
 }
 
 .container-info-pokemon {

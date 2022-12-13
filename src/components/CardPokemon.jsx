@@ -1,11 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export const CardPokemon = ({ pokemon }) => {
-  const capitalizeFirstLetter = (string) => {
-    return string.charAt(0).toUpperCase() + string.slice(1);
-  };
+import { capitalizeFirstLetter } from "../helper/helper.js";
 
+export const CardPokemon = ({ pokemon }) => {
   return (
     <Link to={`/pokemon/${pokemon.id}`} className="card-pokemon">
       <div className="card-img">
@@ -16,8 +14,8 @@ export const CardPokemon = ({ pokemon }) => {
       </div>
       <div className="card-info">
         <span className="pokemon-id">
-          {(pokemon.id <= 10 && `No. 00${pokemon.id}`) ||
-            (pokemon.id > 10 && pokemon.id < 100
+          {(pokemon.id < 10 && `No. 00${pokemon.id}`) ||
+            (pokemon.id >= 10 && pokemon.id < 100
               ? `No. 0${pokemon.id}`
               : `No. ${pokemon.id}`)}
         </span>
