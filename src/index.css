@@ -1,24 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap');
 
 :root {
-  --color-fire: #ff7402;
-  --color-grass: #9bcc50;
-  --color-steel: #9eb7b8;
-  --color-water: #4592c4;
-  --color-psychic: #f366b9;
-  --color-ground: #ab9842;
-  --color-ice: #51c4e7;
-  --color-flying: #3dc7ef;
-  --color-ghost: #4d5b64;
-  --color-normal: #a4acaf;
-  --color-poison: #7e0058;
-  --color-rock: #a38c21;
-  --color-fighting: #d56723;
-  --color-dark: #707070;
-  --color-bug: #729f3f;
+  --color-fire: #E73B0C;
+  --color-grass: #74C236;
+  --color-steel: #B5B5C3;
+  --color-water: #3295F6;
+  --color-psychic: #ED4882;
+  --color-ground: #D3B357;
+  --color-ice: #A3E7FD;
+  --color-flying: #A3B3F7;
+  --color-ghost: #606082;
+  --color-normal: #C8C4BC;
+  --color-poison: #934594;
+  --color-rock: #B9A156;
+  --color-fighting: #82351D;
+  --color-dark: #4F3A2D;
+  --color-bug: #B1C12E;
   --color-dragon: linear-gradient(180deg, #53a4cf 50%, #f16e57 50%);
-  --color-electric: #bba909;
-  --color-fairy: #fdb9e9;
+  --color-electric: #FCBC17;
+  --color-fairy: #F4B1F4;
   --color-shadow: #7b62a3;
   --color-unknow: #757575;
 

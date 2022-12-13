@@ -1,7 +1,6 @@
 import React from "react";
 import { AdjustmentsHorizontalIcon } from "@heroicons/react/24/outline";
-import PokemonList from "../components/PokemonList";
-import Navigation from "../components/Navigation";
+import { PokemonList } from "../components/PokemonList";
 
 export const HomePage = () => {
   return (
@@ -16,5 +15,3 @@ export const HomePage = () => {
     </>
   );
 };
-
-export default HomePage;
