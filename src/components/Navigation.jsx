@@ -1,10 +1,20 @@
 import React, { useContext } from "react";
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useNavigate } from "react-router-dom";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { PokemonContext } from "../context/PokemonContext";
 
 export const Navigation = () => {
-  const { number } = useContext(PokemonContext);
+  const { onInputChange, valueSearch, onResetForm } =
+    useContext(PokemonContext);
+
+  const navigate = useNavigate();
+
+  const onSearchSubmit = (e) => {
+    e.preventDefault();
+    navigate("/search", { state: valueSearch });
+
+    onResetForm();
+  };
 
   return (
     <>
@@ -16,13 +26,15 @@ export const Navigation = () => {
             alt="Logo Pokédex"
           />
         </Link>
-        <form>
+        <form onSubmit={onSearchSubmit}>
           <div className="form-group">
             <MagnifyingGlassIcon className="icon-search" />
             <input
               type="search"
               name="valueSearch"
               id=""
+              value={valueSearch}
+              onChange={onInputChange}
               placeholder="Search for a pokemon"
             />
           </div>
