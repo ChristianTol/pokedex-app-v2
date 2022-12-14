@@ -18,7 +18,7 @@ export const PokemonProvider = ({ children }) => {
   const [active, setActive] = useState(false);
 
   // Call 50 pokemons from the API
-  const getAllPokemons = async (limit = 50) => {
+  const getAllPokemons = async (limit = 12) => {
     const res = await fetch(`${baseUrl}?limit=${limit}&offset=${offset}`);
     const data = await res.json();
 
@@ -63,11 +63,17 @@ export const PokemonProvider = ({ children }) => {
 
   useEffect(() => {
     getAllPokemons();
-  }, []);
+  }, [offset]);
 
   useEffect(() => {
     getGlobalPokemons();
   }, []);
+
+  // BTN Load More
+
+  const loadMore = () => {
+    setOffset(offset + 12);
+  };
 
   return (
     <PokemonContext.Provider
@@ -78,6 +84,7 @@ export const PokemonProvider = ({ children }) => {
         allPokemons,
         globalPokemons,
         getPokemonById,
+        loadMore,
       }}
     >
       {children}
