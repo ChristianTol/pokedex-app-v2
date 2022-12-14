@@ -449,3 +449,19 @@ Styles of Pokemon Single Page
   background-color: var(--color-primary-hover);
   color: #000;
 }
+
+#loader img {
+  animation-name: spin;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

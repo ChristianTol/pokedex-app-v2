@@ -85,6 +85,9 @@ export const PokemonProvider = ({ children }) => {
         globalPokemons,
         getPokemonById,
         loadMore,
+        loading,
+        active,
+        setActive,
       }}
     >
       {children}
