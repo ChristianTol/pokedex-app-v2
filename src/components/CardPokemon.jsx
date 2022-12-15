@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 
 import { capitalizeFirstLetter } from "../helper/helper.js";
 
-export const CardPokemon = ({ pokemon }) => {
+export const CardPokemon = ({ pokemon, lastElementRef }) => {
   return (
     <Link to={`/pokemon/${pokemon.id}`} className="card-pokemon">
-      <div className="card-img">
+      <div ref={lastElementRef} className="card-img">
         <img
           src={pokemon.sprites.other["official-artwork"].front_default}
           alt={`Pokemon ${pokemon.name}`}

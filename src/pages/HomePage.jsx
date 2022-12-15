@@ -3,9 +3,10 @@ import { AdjustmentsHorizontalIcon } from "@heroicons/react/24/outline";
 import { PokemonList } from "../components/PokemonList";
 import FilterBar from "../components/FilterBar";
 import { PokemonContext } from "../context/PokemonContext";
+import { Loader } from "../components/Loader";
 
 export const HomePage = () => {
-  const { loadMore, loading, active, setActive } = useContext(PokemonContext);
+  const { loading, active, setActive } = useContext(PokemonContext);
   return (
     <>
       <div className="container-filter container">
@@ -16,13 +17,13 @@ export const HomePage = () => {
       </div>
       <PokemonList />
       <FilterBar />
-      {!loading && (
+      {/* {!loading && (
         <div className="container-btn-load-more container">
           <button className="btn-load-more" onClick={loadMore}>
             Load more
           </button>
         </div>
-      )}
+      )} */}
     </>
   );
 };
