@@ -27,7 +27,7 @@ export const PokemonProvider = ({ children }) => {
         if (
           entries[0].isIntersecting &&
           nextUrl &&
-          allPokemons.length <= 1134
+          allPokemons.length <= 1140
         ) {
           setTimeout(() => {
             getAllPokemons(nextUrl);

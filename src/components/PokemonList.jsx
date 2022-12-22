@@ -31,7 +31,7 @@ export const PokemonList = () => {
           </>
         )}
       </div>
-      {allPokemons.length < 1154 && <Loader />}
+      {allPokemons.length < 1140 && <Loader />}
     </>
   );
 };
